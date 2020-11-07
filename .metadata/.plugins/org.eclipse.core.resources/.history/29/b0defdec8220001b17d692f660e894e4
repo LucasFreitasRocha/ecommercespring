@@ -1,0 +1,8 @@
+package com.loja.controller;
+
+@RestController
+public class HelloWorldController {
+	
+	
+
+}

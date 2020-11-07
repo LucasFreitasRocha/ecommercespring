@@ -1,0 +1,19 @@
+INDEX VERSION 1.131+/Users/wallacegsouza/Projetos/Estudo/ecommerce/.metadata/.plugins/org.eclipse.jdt.core
+460845689.index
+2843246772.index
+2499224492.index
+344955872.index
+1196426574.index
+1629547030.index
+3366124721.index
+3418894682.index
+3938189620.index
+2128640940.index
+3961712832.index
+4081884435.index
+2227486332.index
+3974857091.index
+550288053.index
+309287309.index
+2295166220.index
+594292359.index

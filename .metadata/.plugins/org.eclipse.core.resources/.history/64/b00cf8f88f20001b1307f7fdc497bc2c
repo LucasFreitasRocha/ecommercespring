@@ -1,0 +1,8 @@
+server.port=5759
+
+spring.application.name="loja"
+
+
+eureka.client.fetch-registry=false
+eureka.client.register-with-eureka=false
+eureka.client.service-url.defaultZone= http://localhost:8761/eureka
