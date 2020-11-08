@@ -8,6 +8,8 @@ import com.loja.controller.dto.CompraDTO;
 import com.loja.controller.dto.InfoFornecedorDTO;
 import com.loja.controller.dto.InfoPedidoDTO;
 import com.loja.modelo.Compra;
+import org.slf4j.Logger;
+
 
 @Service
 public class CompraService {
@@ -18,7 +20,7 @@ public class CompraService {
 	@Autowired
 	private FornecedorClient fornecedorClient;
 
-	
+	private static final Logger LOG = org.slf4j.LoggerFactory.getLogger(CompraService.class);
 	
 	public Compra  realizaCompra(CompraDTO compra) {
 		// TODO Auto-generated method stub
@@ -27,13 +29,14 @@ public class CompraService {
 					 HttpMethod.GET, null, InfoFornecedorDTO.class);
 	 return info.getBody();*/
 		
-
+		LOG.info("Buscando informações do fornecedor de {}", compra.getEndereco().getEstado());
 		InfoFornecedorDTO info = fornecedorClient.getInfoPorEstado(compra.getEndereco().getEstado());
+		LOG.info("realizando um pedido");
 		InfoPedidoDTO pedido = fornecedorClient.realizaPedido(compra.getItens());
 		Compra c = new Compra();
 		c.setPedidoId(pedido.getId());
 		c.setTempoDePreparo(pedido.getTempoDePreparo());
-		c.setEnderecoDestino(compra.getEndereco().toString());
+		c.setEnderecoDestino(info.getEndereco());
 		return c;
 	}
 

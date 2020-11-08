@@ -2,6 +2,7 @@ package com.fornecedor.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,9 +20,11 @@ public class PedidoController {
 
 	@Autowired
 	private PedidoService pedidoService;
+	private static final Logger LOG = org.slf4j.LoggerFactory.getLogger(PedidoController.class);
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public Pedido realizaPedido(@RequestBody List<ItemDoPedidoDTO> produtos) {
+		LOG.info("pedido realizado");
 		return pedidoService.realizaPedido(produtos);
 	}
 	
