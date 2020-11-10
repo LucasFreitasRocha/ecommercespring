@@ -23,4 +23,7 @@
     <fullyQualifiedTypeName name="com.sun.org.slf4j.internal.LoggerFactory"/>
     <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
     <fullyQualifiedTypeName name="com.sun.org.slf4j.internal.Logger"/>
+    <fullyQualifiedTypeName name="com.fornecedor.controller.InfoController"/>
+    <fullyQualifiedTypeName name="com.fornecedor.controller.PedidoController"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker"/>
 </qualifiedTypeNameHistroy>
